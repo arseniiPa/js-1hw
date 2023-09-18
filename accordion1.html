@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .accord-block-tittle {
+            background-color: rgb(87, 76, 243);
+            padding: 10px;
+            cursor: pointer;
+        }
+        .accord-block-tittle:hover {
+            color: tomato;
+            background-color: rgb(143, 255, 255);
+        }
+        .accord-block-text {
+            background-color: rgb(143, 255, 255);
+            max-height: 0;
+            transition: 1s;
+        }
+        .accord-block-text.active {
+            max-height: 150px;
+        }
+        .accord-block-text p {
+            padding: 15px;
+        }
+        .accord-block {
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="accord">
+        <div class="accord-block">
+            <div class="accord-block-tittle tittle1">Tittle 1></div>
+            <div class="accord-block-text text1">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veritatis error fugit eos officia laudantium quia voluptas et rem doloribus, nostrum natus id quaerat eaque modi facilis iure dolorum impedit consequatur.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla fugit aperiam ab quod perferendis molestias libero, doloremque perspiciatis, quas necessitatibus ullam pariatur obcaecati aspernatur ratione repudiandae itaque quis. Deserunt, eos?</p>
+            </div>
+        </div>
+        <div class="accord-block">
+            <div class="accord-block-tittle tittle2">Tittle 2></div>
+            <div class="accord-block-text text2">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, error eum! Cupiditate, sed! Nesciunt, quidem exercitationem. Quo dolores numquam perspiciatis error reprehenderit excepturi odio voluptatibus! Eveniet commodi aperiam fugit incidunt! 
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non necessitatibus illo minima et veritatis consequuntur placeat vel ipsam sed! Explicabo, error nostrum? Tempora temporibus mollitia officia neque unde rerum dolores.</p>
+            </div>
+        </div>
+        <div class="accord-block">
+            <div class="accord-block-tittle tittle3">Tittle 3></div>
+            <div class="accord-block-text text3">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis, impedit reprehenderit exercitationem amet deleniti, dolores, quis id magnam soluta fugiat blanditiis iste officiis nemo ratione assumenda? Quam ipsam mollitia repudiandae?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi eos maxime iusto maiores quo blanditiis aliquam. Omnis nisi placeat minima, nihil odio blanditiis. Consequuntur corrupti quos explicabo distinctio ea similique!</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let accordBTittle1 = document.querySelector(".accord-block-tittle.tittle1")
+        console.log ("tittle =>>this", accordBTittle1)
+        let accordBTittle2 = document.querySelector(".accord-block-tittle.tittle2")
+        console.log ("tittle =>>this", accordBTittle2)
+        let accordBTittle3 = document.querySelector(".accord-block-tittle.tittle3")
+        console.log ("tittle =>>this", accordBTittle3)
+
+        accordBTittle1.onclick = function () {
+            accordBText1.classList.toggle ("active")
+        }
+        accordBTittle2.onclick = function () {
+            accordBText2.classList.toggle ("active")
+        }
+        accordBTittle3.onclick = function () {
+            accordBText3.classList.toggle ("active")
+        }
+
+        let accordBText1 = document.querySelector(".accord-block-text.text1")
+        console.log ('text=>>', accordBText1)
+        let accordBText2 = document.querySelector(".accord-block-text.text2")
+        console.log ('text=>>', accordBText2)
+        let accordBText3 = document.querySelector(".accord-block-text.text3")
+        console.log ('text=>>', accordBText3)
+
+        // for (let index = 0; index < accordBTittle; index++) {
+        //     const element = accordBTittle[index];
+        //     accordBTittle.onclick = function () {
+        //     accordBText.classList.toggle ("active")
+        // }
+        // }
+    </script>
+</body>
+</html>
